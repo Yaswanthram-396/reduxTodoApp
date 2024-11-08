@@ -1,0 +1,28 @@
+.inputAdd{
+    display: flex;
+    justify-content: center;
+}
+.card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height:20vh;
+    background-color: #c2c2c2;
+    margin-bottom: 10px;
+}
+.buttons,.buttons-delete{
+    height:40px;
+    width:90px;
+    font-size: 16px;
+    background-color: rgb(50, 158, 50);
+    color:#fff;
+    border-width:0px;
+    border-radius: 8px;
+}
+.buttons-delete{
+    background-color: rgb(147, 2, 2)
+}
+.statusButtons{
+    display: flex;
+    gap: 40px;
+}
