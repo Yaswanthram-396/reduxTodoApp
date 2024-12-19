@@ -2,7 +2,7 @@
 // import { deleteTodo } from "./action";
 
 const initialState = {
-  todos: [{ id: 1, text: "Learn React", isCompleted: false }],
+  todos: [{ id: 0, text: "Learn React", isCompleted: false }],
 };
 
 const todoReducer = (state = initialState, action) => {
@@ -17,6 +17,7 @@ const todoReducer = (state = initialState, action) => {
       const DeleteTodo = state.todos.filter(
         (eachVar) => eachVar.id !== action.payload
       );
+      console.log(DeleteTodo);
       return { todos: DeleteTodo };
 
     case "COMPLETE_TODO":

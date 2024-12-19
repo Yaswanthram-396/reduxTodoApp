@@ -6,17 +6,19 @@ import "./todo.css";
 
 function TodoApp() {
   const [userInput, setUserInput] = useState("");
-
+  const [count, setCount] = useState(1);
   const dispatch = useDispatch();
   const text = useSelector((state) => state.todo.todos);
 
-  let count = 1;
+  // let count = 1;
   function handleOnChange(element) {
     setUserInput(element.target.value);
   }
 
   const addingTodo = () => {
-    count += 1;
+    // count += 1;
+    setCount((pre) => pre + 1);
+    console.log(count);
     let object = { id: count, text: userInput, isCompleted: false };
     if (userInput !== "") {
       dispatch(addTodo(object));
@@ -35,6 +37,7 @@ function TodoApp() {
           <ReducedTodo array={object} key={object.id} />
         ))}
       </div>
+      {/* done  */}
     </>
   );
 }
